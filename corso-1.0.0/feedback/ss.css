@@ -1,0 +1,116 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper for the feedback table */
+.feedback-results-wrapper {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.feedback-results-wrapper h1 {
+    text-align: center;
+    color: #5a67d8;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table header */
+table th {
+    background-color: #5a67d8;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+/* Table cells */
+table td {
+    padding: 14px;
+    font-size: 16px;
+    color: #555;
+    vertical-align: middle;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* Row hover effect */
+table tr:hover {
+    background-color: #f1f3ff;
+    transition: background-color 0.3s;
+}
+
+/* Alternating row colors */
+table tr:nth-child(even) {
+    background-color: #fafbff;
+}
+
+/* Average rating styling */
+table td:last-child {
+    font-weight: bold;
+    color: #5a67d8;
+    text-align: center;
+}
+
+/* Rating stars color */
+.feedback-star {
+    color: #ffc107;
+    font-size: 20px;
+    padding: 0 2px;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+    }
+}
